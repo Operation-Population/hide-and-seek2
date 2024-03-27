@@ -11,9 +11,28 @@
     <h1>Welcome to Operation-Population's Hide-and-Seek!</h1>
     <p>Explore the virtual world and find hidden objects.</p>
     <!-- A-Frame default scene -->
+<body>
+    <h1>Vertical Platformer</h1>
     <a-scene>
-        <!-- Add your A-Frame components, entities, and assets here -->
-        <!-- For example, add a 3D model or a VR environment -->
+        <!-- Create the player -->
+        <a-entity id="player" position="0 2 0" dynamic-body>
+            <a-box color="blue" width="1" height="1" depth="1"></a-box>
+        </a-entity>
+
+        <!-- Create platforms -->
+        <a-box position="0 0 0" width="5" height="0.2" depth="5" color="green"></a-box>
+        <a-box position="0 3 0" width="3" height="0.2" depth="3" color="green"></a-box>
+        <a-box position="0 6 0" width="2" height="0.2" depth="2" color="green"></a-box>
+
+        <!-- Add gravity -->
+        <a-gravity></a-gravity>
+
+        <!-- Camera setup -->
+        <a-camera position="0 2 5" look-controls>
+            <a-cursor></a-cursor>
+        </a-camera>
     </a-scene>
+</body>
+</html>
 </body>
 </html>
